@@ -3,10 +3,6 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import AuthModule from './AuthModule';
 import FileModule from './FileModule';
-import ChatModule from './ChatModule';
-import ChatGroupModule from './ChatGroupModule';
-import ProjectModule from './ProjectModule';
-
 
 
 Vue.use(Vuex)
@@ -15,9 +11,6 @@ export default new Vuex.Store({
   modules: {
     auth: AuthModule,
     file: FileModule,
-    chat: ChatModule,
-    groupchat: ChatGroupModule,
-    project: ProjectModule
   },
     state: {
       alert_message:null,

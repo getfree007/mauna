@@ -9,6 +9,7 @@
     <div class="wrapper">
         <img class="image--cover" :src="image_url" alt="" @click="launchFilePicker">
     </div>
+    <p style="text-align: center">Clique na foto para editar</p> 
 <div class="list no-hairlines-md">
   <ul>
     <li class="item-content item-input">
@@ -111,7 +112,7 @@ export default {
                     self.$store.commit('setDisplayName',user.displayName);
 
                     firebase.database().ref('users/'+user.uid).update({
-                        photo_url:user.photoURl,
+                        photo_url:user.photoURL,
                         name: user.displayName
                     })
 
